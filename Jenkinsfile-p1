@@ -1,0 +1,27 @@
+// To run multiple parallel stages in a Jenkins Scripted Pipeline, you can use the parallel step
+node {
+    stage('Build') {
+        // build steps
+    }
+
+    // Define stages to run in parallel
+    def parallelStages = [:]
+    parallelStages['Test 1'] = {
+        stage('Test 1') {
+            // test 1 steps
+        }
+    }
+    parallelStages['Test 2'] = {
+        stage('Test 2') {
+            // test 2 steps
+        }
+    }
+    parallelStages['Test 3'] = {
+        stage('Test 3') {
+            // test 3 steps
+        }
+    }
+
+    // Run the stages in parallel
+    parallel parallelStages
+}
