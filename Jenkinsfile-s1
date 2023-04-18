@@ -1,0 +1,11 @@
+//  if condition in a Jenkins scripted pipeline:
+node {
+    stage('Build') {
+        // build steps
+    }
+    if (params.deploy == 'true') {
+        stage('Deploy') {
+            // deploy steps
+        }
+    }
+}

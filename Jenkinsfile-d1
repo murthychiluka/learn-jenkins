@@ -1,0 +1,19 @@
+// Here's an example of how to use the when directive with an if condition in a declarative pipeline:
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                // build steps
+            }
+        }
+        stage('Deploy') {
+            when {
+                expression { params.deploy == 'true' }
+            }
+            steps {
+                // deploy steps
+            }
+        }
+    }
+}
