@@ -40,16 +40,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo "one"
                 // build steps go here
             }
         }
         stage('Test') {
             steps {
+                echo "two"
                 // test steps go here
             }
         }
         stage('Deploy') {
             steps {
+                echo "three"
                 // deployment steps go here
             }
         }
