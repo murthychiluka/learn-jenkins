@@ -59,4 +59,50 @@ pipeline {
     }
 }
 
+pipeline {
+    agent any
+    stages {
+        stage ("Build") {
+            steps {
+            echo "Build" 
+        }
+       
+        }
+        stage ("Compile") {
+            steps {
+            echo "compile" 
+        }
+        steps {
+            echo "compile"
+        }
+            
+        
+    }
+}
 
+pipeline {
+    agent any
+    stages {
+        stage("checkout"){
+            steps {
+                ////
+            }
+        stage("build") {
+            steps {
+                ///
+            }
+        }
+        stage("test") {
+            steps {
+                ///
+
+            }
+        }
+        stage("codequality") {
+            steps {
+                ///
+            }
+        }
+        }
+    }
+}
